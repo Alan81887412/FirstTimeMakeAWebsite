@@ -24,17 +24,6 @@
     font-size: 14px;
 }
 
-.track-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.track-title {
-    font-weight: bold;
-}
-
 *{
     margin:0;
     padding: 0;
