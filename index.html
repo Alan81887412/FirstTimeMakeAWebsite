@@ -4,6 +4,22 @@
 <!--音軌-->
 <audio id="audioPlayer" src="Love_Story.mp3" autoplay></audio>
 
+<!--播放器-->
+<div class="player">
+    <img src="album-art.jpg" alt="Album Art" class="album-art">
+    <div class="details">
+        <p class="track-name">Love Story</p>
+        <p class="artist-name">Taylor Swift</p>
+    </div>
+    <div class="controls">
+        <button id="playPauseButton" class="paused">⏯️</button>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <span id="currentTime">0:00</span> / <span id="durationTime">0:00</span>
+    </div>
+</div>
+
 <!--網頁標題-->
 <head>
     <meta charset="UTF-8">
