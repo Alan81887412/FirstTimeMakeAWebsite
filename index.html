@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<!--網頁標題-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 調整模態框背景與邊框 -->
+    <style>
+        /* 固定模態框大小 */
+        .modal-dialog {
+            max-width: 400px;
+            max-height: 600px;
+        }
+
+        .modal-content {
+            background-color: transparent; /* 背景透明 */
+            border: none; /* 移除邊框 */
+            box-shadow: none; /* 移除陰影 */
+        }
+
+        .modal-body {
+            padding: 0; /* 移除內邊距 */
+            position: relative; /* 設置為相對定位，使內部元素可以絕對定位 */
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 10px; /* 關閉按鈕距離圖片上方的距離 */
+            right: 10px; /* 關閉按鈕距離圖片右側的距離 */
+            z-index: 10; /* 確保關閉按鈕顯示在最上層 */
+        }
+
+        /* 圖片自適應模態框大小 */
+        img {
+            width: 100%; /* 圖片寬度設置為模態框的100% */
+            height: auto; /* 自動調整高度以保持比例 */
+            object-fit: cover; /* 圖片會自適應填滿模態框，並保持比例 */
+        }
+    </style>
+
+</head>
+
+<!--網頁內容-->
+<body>
+    <!--內容上標, 由左至右-->
+    <header>
+        <h2 class="logo">Chia Ying & Chen Yi</h2>
+
+        <nav class="navigation">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#I">I</a>
+            <!--a href="#">I</a-->
+            <a href="#">Will</a>
+            <a href="#">Always</a>
+            <a href="#">Love</a>
+            <a href="#">You</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- I 圖片展示 -->
+    <div class="modal fade" id="I" tabindex="-1" aria-labelledby="I" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img src="C:\Users\Alan\Desktop\messageImage_1724604536896.jpg" class="img-fluid" alt="圖片">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>
+        
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox" >
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Log in</button>
+                <div class="login-register">
+                    <p>Don't Have an account ?
+                        <a href="#" class="register-link">Register</a></p>
+                    </p>
+                </div>
+            </form>
+        </div> 
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label >Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label >Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label >Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label ><input type="checkbox" >
+                    I agree to the terms & conditions</label>
+                    
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="login-register">
+                    <p>Already have an account ?
+                        <a href="#" class="login-link">Login</a></p>
+                    </p>
+                </div>
+            </form>
+        </div> 
+
+    </div>
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
