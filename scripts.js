@@ -52,3 +52,4 @@ progressBar.addEventListener('input', () => {
 audio.addEventListener('loadedmetadata', () => {
     durationDisplay.textContent = formatTime(audio.duration);
 });
+
