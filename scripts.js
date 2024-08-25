@@ -19,33 +19,11 @@ iconClose.addEventListener('click',() => {
 });
 
 const audio = document.getElementById('audio-player');
-const playPauseBtn = document.getElementById('play-pause-btn');
 const seekSlider = document.getElementById('seek-slider');
 const currentTimeElem = document.getElementById('current-time');
 const durationElem = document.getElementById('duration');
 
-let isPlaying = false;
-
-playPauseBtn.addEventListener('click', () => {
-    if (isPlaying) {
-        audio.pause();
-        playPauseBtn.textContent = '播放';
-    } else {
-        audio.play();
-        playPauseBtn.textContent = '暫停';
-    }
-});
-
-audio.addEventListener('play', () => {
-    isPlaying = true;
-    playPauseBtn.textContent = '暫停';
-});
-
-audio.addEventListener('pause', () => {
-    isPlaying = false;
-    playPauseBtn.textContent = '播放';
-});
-
+// 更新進度條和時間
 audio.addEventListener('timeupdate', () => {
     const currentTime = audio.currentTime;
     const duration = audio.duration;
@@ -53,15 +31,18 @@ audio.addEventListener('timeupdate', () => {
     currentTimeElem.textContent = formatTime(currentTime);
 });
 
+// 進度條變更
 seekSlider.addEventListener('input', () => {
     const duration = audio.duration;
     audio.currentTime = (seekSlider.value / 100) * duration;
 });
 
+// 設置音樂時長
 audio.addEventListener('loadeddata', () => {
     durationElem.textContent = formatTime(audio.duration);
 });
 
+// 格式化時間
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
